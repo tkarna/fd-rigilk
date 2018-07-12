@@ -55,4 +55,3 @@ echo "*************************************************************************"
 echo " psutil, virtualenv etc python tools"
 echo "*************************************************************************"
 $BASEDIR/bin/pip3 install pytest pytest-xdist pytest-benchmark
-$BASEDIR/bin/pip3 install mercurial
