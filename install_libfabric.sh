@@ -7,15 +7,15 @@
 mkdir -p $HOME/sources/libfabric/
 cd $HOME/sources/libfabric/
 
-wget https://github.com/ofiwg/libfabric/releases/download/v1.5.0/libfabric-1.5.0.tar.gz
-tar xfv libfabric-1.5.0.tar.gz
-cd libfabric-1.5.0/
-./configure --prefix=/home/karnat/local/libfabric-1.5.0
-make -j12
+wget https://github.com/ofiwg/libfabric/releases/download/v1.6.1/libfabric-1.6.1.tar.gz
+tar xfv libfabric-1.6.1.tar.gz
+cd libfabric-1.6.1/
+./configure --prefix=$HOME/local/libfabric-1.6.1
+make -j 18
 make install
 
 # NOTE to activate, add this to ~/.bashrc
-# FABRICDIR=$HOME/local/libfabric-1.5.0/
+# FABRICDIR=$HOME/local/libfabric-1.6.1/
 # export PATH=$FABRICDIR/bin/:$PATH
 # export CPATH=$FABRICDIR/include/:$CPATH
 # export LD_LIBRARY_PATH=$FABRICDIR/lib/:$LD_LIBRARY_PATH
