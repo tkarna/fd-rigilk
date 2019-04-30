@@ -25,33 +25,3 @@ cd Python-$PYVERSION/
 
 make -j12
 make install
-
-echo "*************************************************************************"
-echo " mpi4py"
-echo "*************************************************************************"
-
-cd $BASEDIR/src
-mkdir mpi4py
-cd mpi4py
-wget https://bitbucket.org/mpi4py/mpi4py/downloads/mpi4py-2.0.0.tar.gz
-mv mpi4py-* mpi4py-2.0.0.tar.gz
-tar xvfz mpi4py-2.0.0.tar.gz
-cd mpi4py-2.0.0/
-python3 setup.py build
-python3 setup.py install
-
-echo "*************************************************************************"
-echo " test mpi4py"
-echo "*************************************************************************"
-# test mpi4py: should print a line for each 5 different processes
-mpiexec -n 5 python3 demo/helloworld.py
-
-echo "*************************************************************************"
-echo " ipython Cython"
-echo "*************************************************************************"
-$BASEDIR/bin/pip3 install --no-binary :all: ipython Cython
-
-echo "*************************************************************************"
-echo " psutil, virtualenv etc python tools"
-echo "*************************************************************************"
-$BASEDIR/bin/pip3 install pytest pytest-xdist pytest-benchmark
