@@ -9,7 +9,7 @@ echo "*************************************************************************"
 cd $BASEDIR/src
 mkdir python3
 cd python3
-PYVERSION=3.6.2
+PYVERSION=3.7.3
 wget https://www.python.org/ftp/python/$PYVERSION/Python-$PYVERSION.tar.xz
 tar xfJ Python-$PYVERSION.tar.xz
 cd Python-$PYVERSION/
